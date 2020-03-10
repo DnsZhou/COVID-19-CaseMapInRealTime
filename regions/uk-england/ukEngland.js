@@ -5,12 +5,20 @@ function loadJson() {
     $.ajax({
         url: jsonPath,
         async: false,
+        xhrFields: {
+            withCredentials: false
+        },
+        crossDomain: false,
         success: function (jsonData) {
             region = jsonData;
 
             $.ajax({
                 url: region.testSourceLink,
                 async: false,
+                crossDomain: false,
+                xhrFields: {
+                    withCredentials: false
+                },
                 success: function (htmlData) {
                     parser = new DOMParser();
                     htmlDoc = parser.parseFromString(htmlData, "text/html");
