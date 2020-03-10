@@ -4,156 +4,609 @@
     "countryShortName": "UK",
     "sourceLink": "https://www.gov.uk/government/publications/coronavirus-covid-19-number-of-cases-in-england/coronavirus-covid-19-number-of-cases-in-england",
     "testSourceLink": "./regions/uk-england/englandTest.html",
-    "locations": [
-        "Barking and Dagenham",
-        "Barnet",
-        "Barnsley",
-        "Bath and North East Somerset",
-        "Bedford",
-        "Bexley",
-        "Birmingham",
-        "Blackburn with Darwen",
-        "Blackpool",
-        "Bolton",
-        "Bournemouth, Christchurch and Poole",
-        "Bracknell Forest",
-        "Bradford",
-        "Brent",
-        "Brighton and Hove",
-        "Bristol, City of",
-        "Bromley",
-        "Buckinghamshire",
-        "Bury",
-        "Calderdale",
-        "Cambridgeshire",
-        "Camden",
-        "Central Bedfordshire",
-        "Cheshire East",
-        "Cheshire West and Chester",
-        "Cornwall and Isles of Scilly",
-        "County Durham",
-        "Coventry",
-        "Croydon",
-        "Cumbria",
-        "Darlington",
-        "Derby",
-        "Derbyshire",
-        "Devon",
-        "Doncaster",
-        "Dorset",
-        "Dudley",
-        "Ealing",
-        "East Riding of Yorkshire",
-        "East Sussex",
-        "Enfield",
-        "Essex",
-        "Gateshead",
-        "Gloucestershire",
-        "Greenwich",
-        "Hackney and City of London",
-        "Halton",
-        "Hammersmith and Fulham",
-        "Hampshire",
-        "Haringey",
-        "Harrow",
-        "Hartlepool",
-        "Havering",
-        "Herefordshire, County of",
-        "Hertfordshire",
-        "Hillingdon",
-        "Hounslow",
-        "Isle of Wight",
-        "Islington",
-        "Kensington and Chelsea",
-        "Kent",
-        "Kingston upon Hull, City of",
-        "Kingston upon Thames",
-        "Kirklees",
-        "Knowsley",
-        "Lambeth",
-        "Lancashire",
-        "Leeds",
-        "Leicester",
-        "Leicestershire",
-        "Lewisham",
-        "Lincolnshire",
-        "Liverpool",
-        "Luton",
-        "Manchester",
-        "Medway",
-        "Merton",
-        "Middlesbrough",
-        "Milton Keynes",
-        "Newcastle upon Tyne",
-        "Newham",
-        "Norfolk",
-        "North East Lincolnshire",
-        "North Lincolnshire",
-        "North Somerset",
-        "North Tyneside",
-        "North Yorkshire",
-        "Northamptonshire",
-        "Northumberland",
-        "Nottingham",
-        "Nottinghamshire",
-        "Oldham",
-        "Oxfordshire",
-        "Peterborough",
-        "Plymouth",
-        "Portsmouth",
-        "Reading",
-        "Redbridge",
-        "Redcar and Cleveland",
-        "Richmond upon Thames",
-        "Rochdale",
-        "Rotherham",
-        "Rutland",
-        "Salford",
-        "Sandwell",
-        "Sefton",
-        "Sheffield",
-        "Shropshire",
-        "Slough",
-        "Solihull",
-        "Somerset",
-        "South Gloucestershire",
-        "South Tyneside",
-        "Southampton",
-        "Southend-on-Sea",
-        "Southwark",
-        "St. Helens",
-        "Staffordshire",
-        "Stockport",
-        "Stockton-on-Tees",
-        "Stoke-on-Trent",
-        "Suffolk",
-        "Sunderland",
-        "Surrey",
-        "Sutton",
-        "Swindon",
-        "Tameside",
-        "Telford and Wrekin",
-        "Thurrock",
-        "Torbay",
-        "Tower Hamlets",
-        "Trafford",
-        "Wakefield",
-        "Walsall",
-        "Waltham Forest",
-        "Wandsworth",
-        "Warrington",
-        "Warwickshire",
-        "West Berkshire",
-        "West Sussex",
-        "Westminster",
-        "Wigan",
-        "Wiltshire",
-        "Windsor and Maidenhead",
-        "Wirral",
-        "Wokingham",
-        "Wolverhampton",
-        "Worcestershire",
-        "York",
-        "Awaiting confirmation"
+    "tbdName": "Awaiting confirmation",
+    "tbdGeocode": "Awaiting confirmation",
+    "totalGeocode":"",
+    "locationsGeocode": [
+        [
+            "Barking and Dagenham",
+            "51.5540666,0.134017"
+        ],
+        [
+            "Barnet",
+            "51.6569225,-0.1949252"
+        ],
+        [
+            "Barnsley",
+            "53.55263,-1.479726"
+        ],
+        [
+            "Bath and North East Somerset",
+            "51.3250102,-2.4766241"
+        ],
+        [
+            "Bedford",
+            "52.1386394,-0.4667782"
+        ],
+        [
+            "Bexley",
+            "51.439933,0.154327"
+        ],
+        [
+            "Birmingham",
+            "52.48624299999999,-1.890401"
+        ],
+        [
+            "Blackburn with Darwen",
+            "53.6957522,-2.4682985"
+        ],
+        [
+            "Blackpool",
+            "53.8175053,-3.0356748"
+        ],
+        [
+            "Bolton",
+            "53.57686469999999,-2.4282192"
+        ],
+        [
+            "Bournemouth, Christchurch and Poole",
+            "50.7380046,-1.9883161"
+        ],
+        [
+            "Bracknell Forest",
+            "51.4153828,-0.7536495"
+        ],
+        [
+            "Bradford",
+            "53.795984,-1.759398"
+        ],
+        [
+            "Brent",
+            "51.5672808,-0.2710568"
+        ],
+        [
+            "Brighton and Hove",
+            "50.8226288,-0.137047"
+        ],
+        [
+            "Bristol, City of",
+            "51.454513,-2.58791"
+        ],
+        [
+            "Bromley",
+            "51.406025,0.013156"
+        ],
+        [
+            "Buckinghamshire",
+            "51.8072204,-0.8127664"
+        ],
+        [
+            "Bury",
+            "53.5933498,-2.2966054"
+        ],
+        [
+            "Calderdale",
+            "53.7247845,-1.8658357"
+        ],
+        [
+            "Cambridgeshire",
+            "52.2052973,0.1218195"
+        ],
+        [
+            "Camden",
+            "51.5454736,-0.1627902"
+        ],
+        [
+            "Central Bedfordshire",
+            "52.0029744,-0.4651388999999999"
+        ],
+        [
+            "Cheshire East",
+            "53.1610446,-2.2185932"
+        ],
+        [
+            "Cheshire West and Chester",
+            "53.2302974,-2.7151117"
+        ],
+        [
+            "Cornwall and Isles of Scilly",
+            "50.4209808,-5.0654697"
+        ],
+        [
+            "County Durham",
+            "54.7294099,-1.8811598"
+        ],
+        [
+            "Coventry",
+            "52.406822,-1.519693"
+        ],
+        [
+            "Croydon",
+            "51.376165,-0.098234"
+        ],
+        [
+            "Cumbria",
+            "54.5772323,-2.7974835"
+        ],
+        [
+            "Darlington",
+            "54.52361,-1.559458"
+        ],
+        [
+            "Derby",
+            "52.9225301,-1.4746186"
+        ],
+        [
+            "Derbyshire",
+            "53.1046782,-1.5623885"
+        ],
+        [
+            "Devon",
+            "50.7155591,-3.530875"
+        ],
+        [
+            "Doncaster",
+            "53.52282,-1.128462"
+        ],
+        [
+            "Dorset",
+            "50.7487635,-2.3444786"
+        ],
+        [
+            "Dudley",
+            "52.512255,-2.081112"
+        ],
+        [
+            "Ealing",
+            "51.5250366,-0.3413965"
+        ],
+        [
+            "East Riding of Yorkshire",
+            "53.8416168,-0.4344106"
+        ],
+        [
+            "East Sussex",
+            "50.9085955,0.2494166"
+        ],
+        [
+            "Enfield",
+            "51.6622909,-0.1180651"
+        ],
+        [
+            "Essex",
+            "51.57424469999999,0.4856781"
+        ],
+        [
+            "Gateshead",
+            "54.95268,-1.603411"
+        ],
+        [
+            "Gloucestershire",
+            "51.8642112,-2.2380335"
+        ],
+        [
+            "Greenwich",
+            "51.4933675,0.0098214"
+        ],
+        [
+            "Hackney and City of London",
+            "51.573445,-0.07243759999999999"
+        ],
+        [
+            "Halton",
+            "53.33172099999999,-2.695822"
+        ],
+        [
+            "Hammersmith and Fulham",
+            "51.4990156,-0.22915"
+        ],
+        [
+            "Hampshire",
+            "51.05769480000001,-1.3080629"
+        ],
+        [
+            "Haringey",
+            "51.5906113,-0.1109709"
+        ],
+        [
+            "Harrow",
+            "51.580559,-0.341995"
+        ],
+        [
+            "Hartlepool",
+            "54.691745,-1.212926"
+        ],
+        [
+            "Havering",
+            "51.577924,0.2120829"
+        ],
+        [
+            "Herefordshire, County of",
+            "52.0765164,-2.6544182"
+        ],
+        [
+            "Hertfordshire",
+            "51.80978229999999,-0.2376744"
+        ],
+        [
+            "Hillingdon",
+            "51.5351832,-0.4481378"
+        ],
+        [
+            "Hounslow",
+            "51.46092179999999,-0.373149"
+        ],
+        [
+            "Isle of Wight",
+            "50.69384789999999,-1.304734"
+        ],
+        [
+            "Islington",
+            "51.5465063,-0.1058058"
+        ],
+        [
+            "Kensington and Chelsea",
+            "51.4990805,-0.1938253"
+        ],
+        [
+            "Kent",
+            "51.2787075,0.5217254000000001"
+        ],
+        [
+            "Kingston upon Hull, City of",
+            "53.76762360000001,-0.3274198"
+        ],
+        [
+            "Kingston upon Thames",
+            "51.41233,-0.300689"
+        ],
+        [
+            "Kirklees",
+            "53.5933432,-1.8009509"
+        ],
+        [
+            "Knowsley",
+            "53.454594,-2.852907"
+        ],
+        [
+            "Lambeth",
+            "51.4571477,-0.1230681"
+        ],
+        [
+            "Lancashire",
+            "53.7632254,-2.7044052"
+        ],
+        [
+            "Leeds",
+            "53.8007554,-1.5490774"
+        ],
+        [
+            "Leicester",
+            "52.6368778,-1.1397592"
+        ],
+        [
+            "Leicestershire",
+            "52.772571,-1.2052126"
+        ],
+        [
+            "Lewisham",
+            "51.4414579,-0.0117006"
+        ],
+        [
+            "Lincolnshire",
+            "52.9451889,-0.1601246"
+        ],
+        [
+            "Liverpool",
+            "53.4083714,-2.9915726"
+        ],
+        [
+            "Luton",
+            "51.8786707,-0.4200255"
+        ],
+        [
+            "Manchester",
+            "53.4807593,-2.2426305"
+        ],
+        [
+            "Medway",
+            "51.4047432,0.5417860999999999"
+        ],
+        [
+            "Merton",
+            "51.4097742,-0.2108084"
+        ],
+        [
+            "Middlesbrough",
+            "54.574227,-1.234956"
+        ],
+        [
+            "Milton Keynes",
+            "52.0406224,-0.7594171"
+        ],
+        [
+            "Newcastle upon Tyne",
+            "54.978252,-1.61778"
+        ],
+        [
+            "Newham",
+            "51.5255162,0.0352163"
+        ],
+        [
+            "Norfolk",
+            "52.6139686,0.8864021"
+        ],
+        [
+            "North East Lincolnshire",
+            "53.5668201,-0.08150660000000001"
+        ],
+        [
+            "North Lincolnshire",
+            "53.60555919999999,-0.5596582"
+        ],
+        [
+            "North Somerset",
+            "51.3879028,-2.7781091"
+        ],
+        [
+            "North Tyneside",
+            "55.0182399,-1.4858436"
+        ],
+        [
+            "North Yorkshire",
+            "53.9915028,-1.5412015"
+        ],
+        [
+            "Northamptonshire",
+            "52.27299439999999,-0.8755514999999999"
+        ],
+        [
+            "Northumberland",
+            "55.2082542,-2.0784138"
+        ],
+        [
+            "Nottingham",
+            "52.95478319999999,-1.1581086"
+        ],
+        [
+            "Nottinghamshire",
+            "53.100319,-0.9936305999999998"
+        ],
+        [
+            "Oldham",
+            "53.5409298,-2.1113659"
+        ],
+        [
+            "Oxfordshire",
+            "51.7612056,-1.2464674"
+        ],
+        [
+            "Peterborough",
+            "52.56949849999999,-0.2405299"
+        ],
+        [
+            "Plymouth",
+            "50.3754565,-4.1426565"
+        ],
+        [
+            "Portsmouth",
+            "50.8197675,-1.0879769"
+        ],
+        [
+            "Reading",
+            "51.4542645,-0.9781303"
+        ],
+        [
+            "Redbridge",
+            "51.5748179,0.0507539"
+        ],
+        [
+            "Redcar and Cleveland",
+            "54.59713439999999,-1.0775997"
+        ],
+        [
+            "Richmond upon Thames",
+            "51.46131099999999,-0.303742"
+        ],
+        [
+            "Rochdale",
+            "53.6097136,-2.1561"
+        ],
+        [
+            "Rotherham",
+            "53.4326035,-1.3635009"
+        ],
+        [
+            "Rutland",
+            "52.6583014,-0.639643"
+        ],
+        [
+            "Salford",
+            "53.48752349999999,-2.2901264"
+        ],
+        [
+            "Sandwell",
+            "52.5361674,-2.010793"
+        ],
+        [
+            "Sefton",
+            "53.5034767,-3.0350661"
+        ],
+        [
+            "Sheffield",
+            "53.38112899999999,-1.470085"
+        ],
+        [
+            "Shropshire",
+            "52.7063657,-2.7417849"
+        ],
+        [
+            "Slough",
+            "51.51053839999999,-0.5950405999999999"
+        ],
+        [
+            "Solihull",
+            "52.411811,-1.77761"
+        ],
+        [
+            "Somerset",
+            "51.105097,-2.9262307"
+        ],
+        [
+            "South Gloucestershire",
+            "51.5264361,-2.4728487"
+        ],
+        [
+            "South Tyneside",
+            "54.9636693,-1.4418634"
+        ],
+        [
+            "Southampton",
+            "50.90970040000001,-1.4043509"
+        ],
+        [
+            "Southend-on-Sea",
+            "51.5459269,0.7077123"
+        ],
+        [
+            "Southwark",
+            "51.502781,-0.087738"
+        ],
+        [
+            "St. Helens",
+            "53.456307,-2.737095"
+        ],
+        [
+            "Staffordshire",
+            "52.8792745,-2.0571868"
+        ],
+        [
+            "Stockport",
+            "53.3933086,-2.1266343"
+        ],
+        [
+            "Stockton-on-Tees",
+            "54.5704551,-1.3289821"
+        ],
+        [
+            "Stoke-on-Trent",
+            "53.002668,-2.179404"
+        ],
+        [
+            "Suffolk",
+            "52.1872472,0.9707800999999999"
+        ],
+        [
+            "Sunderland",
+            "54.906869,-1.383801"
+        ],
+        [
+            "Surrey",
+            "51.31475930000001,-0.5599501"
+        ],
+        [
+            "Sutton",
+            "51.3614279,-0.193961"
+        ],
+        [
+            "Swindon",
+            "51.55577390000001,-1.7797176"
+        ],
+        [
+            "Tameside",
+            "53.4805828,-2.0809891"
+        ],
+        [
+            "Telford and Wrekin",
+            "52.7409916,-2.4868586"
+        ],
+        [
+            "Thurrock",
+            "51.4934557,0.3529197"
+        ],
+        [
+            "Torbay",
+            "50.4619209,-3.525315"
+        ],
+        [
+            "Tower Hamlets",
+            "51.52026069999999,-0.0293396"
+        ],
+        [
+            "Trafford",
+            "53.4215129,-2.3517259"
+        ],
+        [
+            "Wakefield",
+            "53.683298,-1.505924"
+        ],
+        [
+            "Walsall",
+            "52.586214,-1.982919"
+        ],
+        [
+            "Waltham Forest",
+            "51.5886383,-0.0117625"
+        ],
+        [
+            "Wandsworth",
+            "51.45682739999999,-0.1896638"
+        ],
+        [
+            "Warrington",
+            "53.3900441,-2.5969501"
+        ],
+        [
+            "Warwickshire",
+            "52.2671353,-1.4675216"
+        ],
+        [
+            "West Berkshire",
+            "51.4308255,-1.1444927"
+        ],
+        [
+            "West Sussex",
+            "50.9280143,-0.4617075"
+        ],
+        [
+            "Westminster",
+            "51.4974948,-0.1356583"
+        ],
+        [
+            "Wigan",
+            "53.5450645,-2.6325074"
+        ],
+        [
+            "Wiltshire",
+            "51.3491996,-1.9927105"
+        ],
+        [
+            "Windsor and Maidenhead",
+            "51.47997119999999,-0.6242565"
+        ],
+        [
+            "Wirral",
+            "53.3727181,-3.073754"
+        ],
+        [
+            "Wokingham",
+            "51.410457,-0.833861"
+        ],
+        [
+            "Wolverhampton",
+            "52.586973,-2.12882"
+        ],
+        [
+            "Worcestershire",
+            "52.2545225,-2.2668382"
+        ],
+        [
+            "York",
+            "53.95996510000001,-1.0872979"
+        ],
+        [
+            "Awaiting confirmation",
+            "52.3555177,-1.1743197"
+        ]
     ]
 }

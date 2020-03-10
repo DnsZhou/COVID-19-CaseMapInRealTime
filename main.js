@@ -2,32 +2,29 @@
 // Each marker is labeled with a single alphabetical character.
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var labelIndex = 0;
-
-document.write("<script src=''></script>");
+var map = null;
 
 function initialize() {
-    var england = { lat: 54.77, lng: -4.28 };
-    var map = new google.maps.Map(document.getElementById('map'), {
+    var england = { lat: 53.00, lng: -2.00 };
+    map = new google.maps.Map(document.getElementById('map'), {
         zoom: 6,
         center: england
     });
 
     // This event listener calls addMarker() when the map is clicked.
-    google.maps.event.addListener(map, 'click', function (event) {
-        addMarker(event.latLng, map);
-    });
+    // google.maps.event.addListener(map, 'click', function (event) {
+    //     addMarker(event.latLng);
+    // });
 
-    // Add a marker at the center of the map.
-    addMarker(england, map);
 }
 
 // Adds a marker to the map.
-function addMarker(location, map) {
+function addMarker(location, lable) {
     // Add the marker at the clicked location, and add the next-available label
     // from the array of alphabetical characters.
     var marker = new google.maps.Marker({
         position: location,
-        label: labels[labelIndex++ % labels.length],
+        label: lable,
         map: map,
         draggable: false,
     });
