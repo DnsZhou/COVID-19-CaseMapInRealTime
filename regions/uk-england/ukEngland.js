@@ -17,7 +17,7 @@ function loadJson() {
             // updateAndPrintGeoDataToConsole(region, locationGeoMap);
 
             locationNumberMap = new Map(region.locationsGeocode);
-            retriveHtml(region.sourceLink, function (err, htmlData) {
+            retriveHtml(region.testSourceLink, function (err, htmlData) {
 
                 if (err != null) {
                     console.error(err);
