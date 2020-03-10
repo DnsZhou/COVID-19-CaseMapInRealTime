@@ -9,7 +9,7 @@ function loadJson() {
         url: jsonPath,
         async: false,
         success: function (jsonData) {
-            region = JSON.parse(jsonData);
+            region = jsonData;
 
             locationGeoMap = new Map(region.locationsGeocode);
             /* For getting geography code at the first time only */
