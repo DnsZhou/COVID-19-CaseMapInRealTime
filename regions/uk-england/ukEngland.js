@@ -10,19 +10,20 @@ function loadJson() {
         async: false,
         success: function (jsonData) {
             region = jsonData;
+            // region = JSON.parse(jsonData);
 
             locationGeoMap = new Map(region.locationsGeocode);
             /* For getting geography code at the first time only */
             // updateAndPrintGeoDataToConsole(region, locationGeoMap);
 
             locationNumberMap = new Map(region.locationsGeocode);
+            retriveHtml(region.sourceLink, function (err, htmlData) {
 
-            $.ajax({
-                url: region.sourceLink,
-                async: false,
-                success: function (htmlData) {
+                if (err != null) {
+                    console.error(err);
+                } else {
                     parser = new DOMParser();
-                    htmlDoc = parser.parseFromString(htmlData, "text/html");
+                    htmlDoc = htmlData;
                     var updateTime = htmlDoc.getElementsByClassName("publication-header__last-changed")[0].textContent;
                     addUpdateTime(updateTime);
                     var dataSet = Array.from(htmlDoc.getElementsByTagName('table')[0]
@@ -40,9 +41,10 @@ function loadJson() {
                             addMarker(locationObject, number);
                         }
                     });
-                    addTotalMarker(totalNumber)
+                    addTotalMarker(totalNumber);
                 }
-            })
+            });
+
         }
     });
     return locationNumberMap;
@@ -83,6 +85,26 @@ function addTotalMarker(total) {
 function addUpdateTime(updateTime) {
     $("#data-source").append(", " + updateTime);
 }
+
+function retriveHtml(url, callback) {
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'document';
+
+    xhr.onload = function () {
+
+        var status = xhr.status;
+
+        if (status == 200) {
+            callback(null, xhr.response);
+        } else {
+            callback(status);
+        }
+    };
+
+    xhr.send();
+};
 
 
 $(document).ready(function () {
