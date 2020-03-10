@@ -1,4 +1,4 @@
-const jsonPath = "./uk-england.json";
+const jsonPath = "./regions/uk-england/uk-england.json";
 var region = null;
 
 function loadJson() {
