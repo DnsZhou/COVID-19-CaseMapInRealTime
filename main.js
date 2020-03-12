@@ -5,15 +5,6 @@ var labelIndex = 0;
 var map = null;
 
 
-var image = {
-    url: 'https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi-dotless2.png',
-    size: new google.maps.Size(54, 86),
-    // The origin for this image is (0, 0).
-    origin: new google.maps.Point(0, 0),
-    // The anchor for this image is the base of the flagpole at (0, 32).
-    anchor: new google.maps.Point(27, 86)
-};
-
 function initialize() {
     var england = { lat: 53.00, lng: -2.00 };
     map = new google.maps.Map(document.getElementById('map'), {
@@ -36,7 +27,6 @@ function addMarker(location, lable) {
         position: location,
         label: lable,
         map: map,
-        icon: image,
         draggable: false,
     });
 }

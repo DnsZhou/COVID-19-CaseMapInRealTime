@@ -58,7 +58,8 @@ function loadJson() {
                             }
                             let locationObject = { lat: parseFloat(geocodeSet[0]), lng: parseFloat(geocodeSet[1]) };
                             if (number && number !== "" && number !== "0") {
-                                addMarker(locationObject, labelPrefix + number + labelSuffix);
+                                addMarker(locationObject, labelPrefix + number);
+                                // addMarker(locationObject, labelPrefix + number + labelSuffix);
                             }
                         });
                         addTotalMarker(totalNumber);
