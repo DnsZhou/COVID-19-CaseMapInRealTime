@@ -17,39 +17,53 @@ function loadJson() {
             // updateAndPrintGeoDataToConsole(region, locationGeoMap);
 
             locationNumberMap = new Map(region.locationsGeocode);
-            retriveHtml(region.testSourceLink, function (err, htmlData) {
+            prevlocationNumberMap = new Map(region.locationsGeocode);
+            retriveHtml(region.todaySourceLink, function (err, todayHtmlData) {
+                retriveHtml(region.yesterdaySourceLink, function (err2, yesterdayHtmlData) {
 
-                if (err != null) {
-                    console.error(err);
-                } else {
-                    parser = new DOMParser();
-                    htmlDoc = htmlData;
-                    var updateTime = htmlDoc.getElementsByClassName("publication-header__last-changed")[0].textContent;
-                    addUpdateTime(updateTime);
-                    var dataSet = Array.from(htmlDoc.getElementsByTagName('table')[0]
-                        .getElementsByTagName('tbody')[0]
-                        .getElementsByTagName('tr'));
-                    dataSet.forEach(tr => {
-                        let location = tr.getElementsByTagName('td')[0].textContent;
-                        let number = tr.getElementsByTagName('td')[1].textContent;
-                        let geocodeSet = null;
-                        let labelPrefix = "";
-                        totalNumber += parseInt(number);
-                        locationNumberMap.set(location, number);
-                        if (location === region.tbdName) {
-                            geocodeSet = region.tbdGeocode.split(",");
-                            labelPrefix = "Unconfirmed: "
-                        } else {
-                            geocodeSet = locationGeoMap.get(location).split(",");
-                        }
-                        let locationObject = { lat: parseFloat(geocodeSet[0]), lng: parseFloat(geocodeSet[1]) };
-                        if (number && number !== "" && number !== "0") {
-                            // addMarker(locationObject, number+" "+location);
-                            addMarker(locationObject, labelPrefix + number);
-                        }
-                    });
-                    addTotalMarker(totalNumber);
-                }
+                    if (err1 || err2) {
+                        console.error(err);
+                    } else {
+                        parser = new DOMParser();
+                        htmlDoc = todayHtmlData;
+                        prevHtmlDoc = yesterdayHtmlData;
+                        var updateTime = htmlDoc.getElementsByClassName("publication-header__last-changed")[0].textContent;
+                        addUpdateTime(updateTime);
+                        var dataSet = Array.from(htmlDoc.getElementsByTagName('table')[0]
+                            .getElementsByTagName('tbody')[0]
+                            .getElementsByTagName('tr'));
+                        var dataSet0 = Array.from(prevHtmlDoc.getElementsByTagName('table')[0]
+                            .getElementsByTagName('tbody')[0]
+                            .getElementsByTagName('tr'));
+                        dataSet0.forEach(tr => {
+                            let location = tr.getElementsByTagName('td')[0].textContent;
+                            let number = tr.getElementsByTagName('td')[1].textContent;
+                            prevlocationNumberMap.set(location, number);
+                        });
+                        dataSet.forEach(tr => {
+                            let location = tr.getElementsByTagName('td')[0].textContent;
+                            let number = tr.getElementsByTagName('td')[1].textContent;
+                            let geocodeSet = null;
+                            let prevNum = prevlocationNumberMap.get(location);
+                            let labelPrefix = "";
+                            let labelSuffix = "";
+                            totalNumber += parseInt(number);
+                            locationNumberMap.set(location, number);
+                            labelSuffix = number === prevNum ? "" : "(+" + (parseInt(number) - parseInt(prevNum)) + ")";
+                            if (location === region.tbdName) {
+                                geocodeSet = region.tbdGeocode.split(",");
+                                labelPrefix = "Unconfirmed: "
+                            } else {
+                                geocodeSet = locationGeoMap.get(location).split(",");
+                            }
+                            let locationObject = { lat: parseFloat(geocodeSet[0]), lng: parseFloat(geocodeSet[1]) };
+                            if (number && number !== "" && number !== "0") {
+                                addMarker(locationObject, labelPrefix + number + labelSuffix);
+                            }
+                        });
+                        addTotalMarker(totalNumber);
+                    }
+                });
             });
 
         }
