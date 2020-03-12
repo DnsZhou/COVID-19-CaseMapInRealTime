@@ -18,7 +18,7 @@ function loadJson() {
 
             locationNumberMap = new Map(region.locationsGeocode);
             prevlocationNumberMap = new Map(region.locationsGeocode);
-            retriveHtml(region.todaySourceLink, function (err, todayHtmlData) {
+            retriveHtml(region.todaySourceLink, function (err1, todayHtmlData) {
                 retriveHtml(region.yesterdaySourceLink, function (err2, yesterdayHtmlData) {
 
                     if (err1 || err2) {
