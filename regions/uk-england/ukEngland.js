@@ -32,13 +32,20 @@ function loadJson() {
                     dataSet.forEach(tr => {
                         let location = tr.getElementsByTagName('td')[0].textContent;
                         let number = tr.getElementsByTagName('td')[1].textContent;
+                        let geocodeSet = null;
+                        let labelPrefix = "";
                         totalNumber += parseInt(number);
                         locationNumberMap.set(location, number);
-                        let geocodeSet = locationGeoMap.get(location).split(",");
+                        if (location === region.tbdName) {
+                            geocodeSet = region.tbdGeocode.split(",");
+                            labelPrefix = "Unconfirmed: "
+                        } else {
+                            geocodeSet = locationGeoMap.get(location).split(",");
+                        }
                         let locationObject = { lat: parseFloat(geocodeSet[0]), lng: parseFloat(geocodeSet[1]) };
                         if (number && number !== "" && number !== "0") {
                             // addMarker(locationObject, number+" "+location);
-                            addMarker(locationObject, number);
+                            addMarker(locationObject, labelPrefix + number);
                         }
                     });
                     addTotalMarker(totalNumber);
