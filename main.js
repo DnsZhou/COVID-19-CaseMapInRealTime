@@ -7,11 +7,11 @@ var map = null;
 
 var image = {
     url: 'https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi-dotless2.png',
-    size: new google.maps.Size(32, 32),
+    size: new google.maps.Size(54, 86),
     // The origin for this image is (0, 0).
     origin: new google.maps.Point(0, 0),
     // The anchor for this image is the base of the flagpole at (0, 32).
-    anchor: new google.maps.Point(16, 32)
+    anchor: new google.maps.Point(27, 86)
 };
 
 function initialize() {
